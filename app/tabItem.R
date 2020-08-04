@@ -1,5 +1,5 @@
 library(shiny)
-library(shinydashboardPlus)
+library(shinydashboard)
 
 
 createTabItem <- function(x){
@@ -22,7 +22,7 @@ createTabItem <- function(x){
           id = 1,
           title = "Course Info",
           color = "warning",
-          collapsed = TRUE,
+          collapsed = T,
           wellPanel(
             numericInput(
               inputId = "classweeks",

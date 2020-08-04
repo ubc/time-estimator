@@ -1,5 +1,5 @@
 library(shiny)
-library(shinydashboardPlus)
+library(shinydashboard)
 
 #pulls Tab Item details from "tabItem.R"
 getTabItem <- function(x){
@@ -28,17 +28,17 @@ shinyUI(
       ),
       body <- dashboardBody(
         tabItems(
-          tabItem(tabName = "info",
-                  h2("Info tab content"),
-                  #Credit Information
-                  p("Modifed from ", HTML('&nbsp;'), a("Betsy Barre", href="https://cat.wfu.edu/about/our-team/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Allen Brown", href="https://oe.wfu.edu/about/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Justin Esarey", href="http://www.justinesarey.com", target="blank"), br(), a("Click Here for Estimation Details", href="https://cte.rice.edu/workload#howcalculated")),  
-                  div(a(img(src="/cc-by-nc-sa.png"),href="https://creativecommons.org/licenses/by-nc-sa/4.0/"), style="text-align: left;"),
-                  div(a(href="https://cat.wfu.edu/resources/tools/estimator2/", "Workload Calculator 2.0"), style="text-align:left;", target="blank", align="left"),
-                  hr(),
+          #tabItem(tabName = "info",
+           #       h2("Info tab content"),
+           #       #Credit Information
+           #       p("Modifed from ", HTML('&nbsp;'), a("Betsy Barre", href="https://cat.wfu.edu/about/our-team/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Allen Brown", href="https://oe.wfu.edu/about/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Justin Esarey", href="http://www.justinesarey.com", target="blank"), br(), a("Click Here for Estimation Details", href="https://cte.rice.edu/workload#howcalculated")),  
+           #       div(a(img(src="/cc-by-nc-sa.png"),href="https://creativecommons.org/licenses/by-nc-sa/4.0/"), style="text-align: left;"),
+           #       div(a(href="https://cat.wfu.edu/resources/tools/estimator2/", "Workload Calculator 2.0"), style="text-align:left;", target="blank", align="left"),
+           #       hr(),
                   #Information for our code
                  #div(a(img(src="/cc-by-nc-sa.png"),href="https://creativecommons.org/licenses/by-nc-sa/4.0/"), style="text-align: left;"),
                  #div(a(href="source.zip", "Download our Source Code"), style="text-align:left;", target="blank", align="left")
-          ),
+          #),
                      
           #creates new tab items using "IDs"tabNames" created above
           getTabItem("course1"),
