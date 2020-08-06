@@ -1,65 +1,75 @@
 library(shiny)
-library(shinydashboard)
+library(ggplot2)
 
-#pulls Tab Item details from "tabItem.R"
-getTabItem <- function(x){
-  source("tabItem.R")
-  return(createTabItem(x))
-}
+dataset <- diamonds
 
-#initialize UI component
 shinyUI(
-  ui= (
-  dashboardPage(
-    dashboardHeader(title = "Course Workload Estimator", titleWidth = 300),
-      sidebar <- dashboardSidebar(
-        #add menu items to the sidebar
-        #menu items are tabs that open when clicked
-        sidebarMenu(
-          menuItem(text= "Info", tabName="info", icon=icon("info-circle")),
-          menuItem(text= "Course 1", tabName="course1", icon=icon("book")),
-          menuItem(text= "Course 2", tabName="course2", icon=icon("book")),
-          menuItem(text= "Course 3", tabName="course3", icon=icon("book")),
-          menuItem(text= "Course 4", tabName="course4", icon=icon("book")),
-          menuItem(text= "Course 5", tabName="course5", icon=icon("book")),
-          menuItem(text= "Course 6", tabName="course6", icon=icon("book")),
-          menuItem(text= "Workload Total", tabName="total", icon=icon("calculator"))
-        )
-      ),
-      body <- dashboardBody(
-        tabItems(
-          #tabItem(tabName = "info",
-           #       h2("Info tab content"),
-           #       #Credit Information
-           #       p("Modifed from ", HTML('&nbsp;'), a("Betsy Barre", href="https://cat.wfu.edu/about/our-team/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Allen Brown", href="https://oe.wfu.edu/about/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Justin Esarey", href="http://www.justinesarey.com", target="blank"), br(), a("Click Here for Estimation Details", href="https://cte.rice.edu/workload#howcalculated")),  
-           #       div(a(img(src="/cc-by-nc-sa.png"),href="https://creativecommons.org/licenses/by-nc-sa/4.0/"), style="text-align: left;"),
-           #       div(a(href="https://cat.wfu.edu/resources/tools/estimator2/", "Workload Calculator 2.0"), style="text-align:left;", target="blank", align="left"),
-           #       hr(),
-                  #Information for our code
-                 #div(a(img(src="/cc-by-nc-sa.png"),href="https://creativecommons.org/licenses/by-nc-sa/4.0/"), style="text-align: left;"),
-                 #div(a(href="source.zip", "Download our Source Code"), style="text-align:left;", target="blank", align="left")
-          #),
-                     
-          #creates new tab items using "IDs"tabNames" created above
-          getTabItem("course1"),
-          #getTabItem("course2"),
-          #getTabItem("course3"),
-          #getTabItem("course4"),
-          #getTabItem("course5"),
-          #getTabItem("course6"),
-          
-          tabItem(tabName = "total",
-                  h2("Total tab content")
-          )
-        )
-      ),
+  fluidPage(
+    tags$head(
+      #tags$link(rel = "stylesheet", type = "text/css", href = "bootstrap.css"),
+      tags$style("#scrollpanel {
+            overflow: auto;
+            background:	#f5f5f5;
+            margin-left: 5px;
+        }"),
+    ),
+   
+    h3("Workload Estimator", align="center"),
+    p(strong("Modified by:"), HTML('&nbsp;'), a("Daulton Baird", href="https://provost.ok.ubc.ca/about-the-office/office-team-contact/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Mateen Shaikh", href="http://kamino.tru.ca/experts/home/main/bio.html?id=mshaikh", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Michelle Lamberson", href="https://provost.ok.ubc.ca/about-the-office/office-team-contact/", target="blank"), align="center"),
     
-      # Put them together into a dashboardPage
-      dashboardPage(
-        dashboardHeader(),
-        sidebar,
-        body
-      )
-    )#end of dashboard page
-  )#end of UI declaration
-)#end of shinyUI
+    p(strong("Research & Design:"), HTML('&nbsp;'), a("Betsy Barre", href="https://cat.wfu.edu/about/our-team/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Allen Brown", href="https://oe.wfu.edu/about/", target="blank"), HTML('&nbsp;'), a("|"), HTML('&nbsp;'), a("Justin Esarey", href="http://www.justinesarey.com", target="blank"), br(), br(), a("Click Here for Estimation Details", href="https://cat.wfu.edu/resources/tools/estimator2details/",target="blank"), align="center"),
+    
+    hr(),
+    
+    fluidRow(
+      #These radio buttons allow the user to select an item to add to workload
+      column(2,
+             h4("Add a Estimation item", align="center"),
+             wellPanel(
+             radioButtons("radio", "",
+                          c("Discussion" = "discussion",
+                            "Exam" = "exam",
+                            "Quiz" = "quiz",
+                            "Lecture" = "lecture",
+                            "Lab" = "lab",
+                            "Reading Assignment" = "reading",
+                            "Video/Podcast" = "video",
+                            "Writing assignment" = "writing",
+                            "Custom Assignment" = "custom"))
+             )
+      ),
+      column(3,
+             #This is the panel that  is generated based on the radio button
+             h4(textOutput("selected_radio"), align="center"),
+              uiOutput("selected_panel")
+          ),
+      column(3,
+             #This is the background information on the panel that has been selected (also controlled by radio button)
+             h4("Background",align="center"),
+             absolutePanel(id="scrollpanel", height="480px", width="90%",
+                uiOutput("selected_bkgd")
+             )
+             
+             ),
+      column(4,
+             #This is the summary tab where the calculations are shown.
+             h4("Workload Summary", align = "center"),
+             
+             wellPanel(
+               p(strong("Asynchronous:", inline=T), align="left"),
+               p(strong("Synchronous:", inline=T), align="left"),
+               p(strong("Total:", inline=T), align="left"),
+               hr(),
+               p(strong("Term Total:", inline=T), align="left"),
+               
+               #p(strong(textOutput("estimatedworkload", inline=T)), align="right"),
+               #p(strong(textOutput("estimatedoutofclass", inline=T)), align="right"),
+               #p(strong(textOutput("estimatedengaged", inline=T)), align="right"),
+               
+               #p(strong(textOutput("totalcoursehours", inline=T)), align="right")
+               #br(style="line-height:27px")
+             )
+    ),
+    )    
+  )
+)
