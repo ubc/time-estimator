@@ -7,4 +7,5 @@ This time estimator is built using R's Shiny and Shiny Dashboard Plus libraries 
 
 ## Update: Sept 24 2020
 The app is now live and availible at: https://ubcoapps.elearning.ubc.ca/time-estimator.
+
 Build Status: WIP, Surveys underway
