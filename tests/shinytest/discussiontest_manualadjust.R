@@ -1,0 +1,12 @@
+app <- ShinyDriver$new("../../")
+app$snapshotInit("discussiontest_manualadjust")
+
+app$snapshot()
+app$setInputs(radio = "discussion")
+app$snapshot()
+app$setInputs(postspersem = 14)
+app$snapshot()
+app$setInputs(setdiscussion = TRUE)
+app$snapshot()
+app$setInputs(add = "click")
+app$snapshot()

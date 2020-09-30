@@ -1,0 +1,12 @@
+app <- ShinyDriver$new("../../")
+app$snapshotInit("videopodcasttest")
+
+app$snapshot()
+app$setInputs(radio = "video")
+app$snapshot()
+app$setInputs(videoName = "videos")
+app$snapshot()
+app$setInputs(weeklyvideos = 1)
+app$snapshot()
+app$setInputs(add = "click")
+app$snapshot()

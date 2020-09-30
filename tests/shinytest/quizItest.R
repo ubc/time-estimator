@@ -1,0 +1,15 @@
+app <- ShinyDriver$new("../../")
+app$snapshotInit("quizItest")
+
+app$snapshot()
+app$setInputs(radio = "quiz")
+app$snapshot()
+app$setInputs(quizzes = 14)
+app$snapshot()
+#this is a default value so wait_=FALSE and values_=FALSE is used so the test does not wait for a value change
+app$setInputs(quizlength = 15, wait_=FALSE, values_=FALSE)
+app$snapshot()
+app$setInputs(studyhours = 2)
+app$snapshot()
+app$setInputs(add = "click")
+app$snapshot()
