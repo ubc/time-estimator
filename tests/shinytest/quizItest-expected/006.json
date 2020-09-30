@@ -1,0 +1,63 @@
+{
+  "input": {
+    "add": 1,
+    "classweeks": 14,
+    "collapse1": "About this tool (click to view/hide)",
+    "collapse2": "Instructions (click to view/hide)",
+    "collapse3": null,
+    "quizformat": "1",
+    "quizlength": 15,
+    "quizzes": 14,
+    "radio": "quiz",
+    "studyhours": 2,
+    "synclength": 0,
+    "syncsessions": 0
+  },
+  "output": {
+    "estimatedAsynch": "Independent (I): 0 hrs/week",
+    "estimatedSynch": "Scheduled (S): 0 hrs/week",
+    "estimatedworkload": "Total: 0 hrs/week",
+    "numWeeks": {
+      "html": "<div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n  <label class=\"control-label\" for=\"classweeks\">Course Duration (Weeks):<\/label>\n  <input id=\"classweeks\" type=\"number\" class=\"form-control\" value=\"14\" min=\"0\"/>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_bkgd": {
+      "html": "<div>\n  <p>This component is focused on quizzes, which can be either be held in an asynchronous (typically online) or synchronous (within a Primary Class Meeting) manner.<\/p>\n  <p>Note that there is a pull down that allows you to select the format, and the options will change accordingly. If both are relevant, you can add this component more than once.<\/p>\n  <b>Scheduled Quiz<\/b>\n  <ul>\n    <li>The Scheduled Quiz is associated with the Primary Class Meeting component and is designed to allow an instructor to take into account the preparation time required to prepare for the quiz.<\/li>\n    <li>The only time that will be added to the total will be a preparation time, classified as independent.<\/li>\n  <\/ul>\n  <b>Independent Quiz<\/b>\n  <ul>\n    <li>The Independent Quiz is one that is taken at a time of the student’s discretion, usually within a set date and time constraint. Both preparation time and quiz time are assigned to the independent category and reflected in workload summary accordingly.<\/li>\n  <\/ul>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_panel": {
+      "html": "<div class=\"well\">\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"quizformat\">Format:<\/label>\n    <div>\n      <select id=\"quizformat\"><option value=\"1\" selected>Independent<\/option>\n<option value=\"2\">Scheduled<\/option><\/select>\n      <script type=\"application/json\" data-for=\"quizformat\" data-nonempty=\"\">{}<\/script>\n    <\/div>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"quizzes\">Quizzes per Term:<\/label>\n    <input id=\"quizzes\" type=\"number\" class=\"form-control\" value=\"0\" min=\"0\"/>\n  <\/div>\n  <hr/>\n  <div data-display-if=\"input.quizformat == 1\" data-ns-prefix=\"\">\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"quizlength\">Quiz Time Limit (in Minutes)<\/label>\n      <input id=\"quizlength\" type=\"number\" class=\"form-control\" value=\"15\" min=\"0\"/>\n    <\/div>\n  <\/div>\n  <div data-display-if=\"input.postformat == 2\" data-ns-prefix=\"\"><\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"studyhours\">Study Hours per Quiz:<\/label>\n    <input id=\"studyhours\" type=\"number\" class=\"form-control\" value=\"1\" min=\"0\" max=\"50\"/>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "selected_radio": "Add a Quiz",
+    "totalcoursehours": "Total: 0 hrs/term",
+    "workload": {
+      "html": "<div class=\"well\">\n  <table>\n    <tr style=\" background-color: #267bb6; color: white;\">\n      <th style=\"padding: 5px; border: 1px solid black;\">Component<\/th>\n      <th style=\"padding: 5px; border: 1px solid black; \">Name<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/term (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black\">hrs/term (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">Delete?<\/th>\n    <\/tr>\n  <\/table>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

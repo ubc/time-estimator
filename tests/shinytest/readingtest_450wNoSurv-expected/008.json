@@ -1,0 +1,66 @@
+{
+  "input": {
+    "add": 1,
+    "classweeks": 14,
+    "collapse1": "About this tool (click to view/hide)",
+    "collapse2": "Instructions (click to view/hide)",
+    "collapse3": null,
+    "difficulty": "1",
+    "overridepagesperhour": 10,
+    "radio": "reading",
+    "readingdensity": "1",
+    "readingName": "readings",
+    "readingpurpose": "1",
+    "setreadingrate": false,
+    "synclength": 0,
+    "syncsessions": 0,
+    "weeklypages": 10
+  },
+  "output": {
+    "estimatedAsynch": "Independent (I): 0 hrs/week",
+    "estimatedSynch": "Scheduled (S): 0 hrs/week",
+    "estimatedworkload": "Total: 0 hrs/week",
+    "numWeeks": {
+      "html": "<div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n  <label class=\"control-label\" for=\"classweeks\">Course Duration (Weeks):<\/label>\n  <input id=\"classweeks\" type=\"number\" class=\"form-control\" value=\"14\" min=\"0\"/>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_bkgd": {
+      "html": "<div>\n  <p>This component is focused on independent readings such as assigned textbook readings, readings of short stories, novel excerpts, etc. The hours from this component will be assigned to the independent category and reflected in workload summary accordingly.<\/p>\n  <p>This component allows you to set the number of Pages per Week a student is expected to read, and uses Page Density, Difficulty and Purpose as variables to calculate the length of time.<\/p>\n  <p>\n    The table below shows how the calculations are derived, and has been cited from the work of Barre, Brown, and Esarey (See \n    <a href=\"https://cte.rice.edu/workload#howcalculated\" target=\"_blank\">Estimation details<\/a>\n    ). Note that the rows in the table that are yellow are the ones with the highest level of certainty.\n  <\/p>\n  <br/>\n  <table style=\"border: 1px solid;\">\n    <tbody>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\"><\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\">\n          <b>450 Words (Paperback)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\">\n          <b>600 Words (Monograph)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\">\n          <b>750 Words (Textbook))<\/b>\n        <\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">\n          <b>Survey; No New Concepts (500 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">67 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">50 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">40 pages per hour<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\">\n          <b>Survey; Some New Concepts (350 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">47 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">35 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">28 pages per hour<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\">\n          <b>Survey; Many New Concepts (250 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">33 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">25 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">20 pages per hour<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">\n          <b>Understand; No New Concepts (250 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">33 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">25 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">20 pages per hour<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">\n          <b>Understand; Some New Concepts (180 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">24 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">18 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">14 pages per hour<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\">\n          <b>Understand; Many New Concepts (130 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">17 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">13 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">10 pages per hour<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">\n          <b>Engage; No New Concepts (130 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">17 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">13 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #ffffcc;\">10 pages per hour<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\">\n          <b>Engage; Some New Concepts (90 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">12 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">9 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">7 pages per hour<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 10px; background-color: #dcdcdc;\">\n          <b>Engage; Many New Concepts (65 wpm)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">9 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">7 pages per hour<\/td>\n        <td style=\"border: 1px solid; padding: 10px;\">5 pages per hour<\/td>\n      <\/tr>\n    <\/tbody>\n  <\/table>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_panel": {
+      "html": "<div class=\"well\">\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"readingName\">Assignment Name (optional):<\/label>\n    <input id=\"readingName\" type=\"text\" class=\"form-control\" value=\"\"/>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"weeklypages\">Pages per Week:<\/label>\n    <input id=\"weeklypages\" type=\"number\" class=\"form-control\" value=\"0\" min=\"0\"/>\n  <\/div>\n  <hr/>\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"readingdensity\">Page Density:<\/label>\n    <div>\n      <select id=\"readingdensity\"><option value=\"1\" selected>450 Words<\/option>\n<option value=\"2\">600 Words<\/option>\n<option value=\"3\">750 Words<\/option><\/select>\n      <script type=\"application/json\" data-for=\"readingdensity\" data-nonempty=\"\">{}<\/script>\n    <\/div>\n  <\/div>\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"difficulty\">Difficulty:<\/label>\n    <div>\n      <select id=\"difficulty\"><option value=\"1\" selected>No New Concepts<\/option>\n<option value=\"2\">Some New Concepts<\/option>\n<option value=\"3\">Many New Concepts<\/option><\/select>\n      <script type=\"application/json\" data-for=\"difficulty\" data-nonempty=\"\">{}<\/script>\n    <\/div>\n  <\/div>\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"readingpurpose\">Purpose:<\/label>\n    <div>\n      <select id=\"readingpurpose\"><option value=\"1\" selected>Survey<\/option>\n<option value=\"2\">Understand<\/option>\n<option value=\"3\">Engage<\/option><\/select>\n      <script type=\"application/json\" data-for=\"readingpurpose\" data-nonempty=\"\">{}<\/script>\n    <\/div>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <div class=\"checkbox\">\n      <label>\n        <input id=\"setreadingrate\" type=\"checkbox\"/>\n        <span>manually adjust<\/span>\n      <\/label>\n    <\/div>\n  <\/div>\n  <div data-display-if=\"input.setreadingrate == true\" data-ns-prefix=\"\">\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"overridepagesperhour\">Pages Read per Hour:<\/label>\n      <input id=\"overridepagesperhour\" type=\"number\" class=\"form-control\" value=\"10\" min=\"0\"/>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "selected_radio": "Add a Reading Assignment",
+    "totalcoursehours": "Total: 0 hrs/term",
+    "workload": {
+      "html": "<div class=\"well\">\n  <table>\n    <tr style=\" background-color: #267bb6; color: white;\">\n      <th style=\"padding: 5px; border: 1px solid black;\">Component<\/th>\n      <th style=\"padding: 5px; border: 1px solid black; \">Name<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/term (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black\">hrs/term (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">Delete?<\/th>\n    <\/tr>\n  <\/table>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
