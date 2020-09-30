@@ -10,5 +10,5 @@ The app is now live and availible at: https://ubcoapps.elearning.ubc.ca/time-est
 
 Build Status: WIP, Surveys underway
 
-## Update Sept 30 2020
+## Update: Sept 30 2020
 Testing has now been created for the UI elements using Shiny's shinytest library. See testing directory (or testing branch) for files.
