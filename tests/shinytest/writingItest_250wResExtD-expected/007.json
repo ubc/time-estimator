@@ -1,0 +1,69 @@
+{
+  "input": {
+    "add": 0,
+    "assignmentpages": 5,
+    "classweeks": 14,
+    "collapse1": "About this tool (click to view/hide)",
+    "collapse2": "Instructions (click to view/hide)",
+    "collapse3": null,
+    "draftrevise": "3",
+    "numassign": 5,
+    "overridehoursperwriting": 0.5,
+    "preptime": 30,
+    "radio": "writing",
+    "setwritingrate": false,
+    "synclength": 0,
+    "syncsessions": 0,
+    "writingformat": "1",
+    "writingName": "writing",
+    "writingpurpose": "3",
+    "writtendensity": "1"
+  },
+  "output": {
+    "estimatedAsynch": "Independent (I): 0 hrs/week",
+    "estimatedSynch": "Scheduled (S): 0 hrs/week",
+    "estimatedworkload": "Total: 0 hrs/week",
+    "numWeeks": {
+      "html": "<div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n  <label class=\"control-label\" for=\"classweeks\">Course Duration (Weeks):<\/label>\n  <input id=\"classweeks\" type=\"number\" class=\"form-control\" value=\"14\" min=\"0\"/>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_bkgd": {
+      "html": "<div>\n  <p>This component is focused on writing assignments or activities such as essays, creating short stories, and research papers. A writing assignment may be independent or scheduled (for in-class writing assignments). <\/p>\n  <p>The in-class writing assignment option allows you to set the number of assignments, but will only add the preparation time component to the time estimate totals. The writing itself will be accommodated in the live class meeting time.<\/p>\n  <p>The independent writing assignment component allows you to set the number of assignments and uses the number of Pages per Assignment, Genre and Drafting as variables to calculate the length of time it will take for that  assignment to be completed.<\/p>\n  <p>\n    The Table below shows how the calculations are derived, and has been cited from the work of Barre, Brown, and Esarey (See \n    <a href=\"https://cte.rice.edu/workload#howcalculated\" target=\"_blank\">Estimation details<\/a>\n    ). Note that the rows in the table that are yellow are the ones with the highest level of certainty.\n  <\/p>\n  <table style=\"border: 1px solid;\">\n    <tbody>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\"><\/td>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>250 Words (Double Spaced)<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>500 Words (Single Spaced)<\/b>\n        <\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>Reflection/Narrative; No Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">45 minutes per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">1 hour 30 minutes per page<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>Reflection/Narrative; Minimal Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">1 hour per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">2 hours per page<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>Reflection/Narrative; Extensive Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">1 hour 15 minutes per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">2 hours 30 minutes per page<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #ffffcc;\">\n          <b>Argument; No Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #ffffcc;\">1 hour 30 minutes per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #ffffcc;\">3 hours per page<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>Argument; Minimal Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">2 hours per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">4 hours per page<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #ffffcc;\">\n          <b>Argument; Extensive Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #ffffcc;\">2 hour 30 minutes per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #ffffcc;\">5 hours per page<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>Research; No Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">3 hours per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">6 hours per page<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>Research; Minimal Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">4 hours per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">8 hours per page<\/td>\n      <\/tr>\n      <tr>\n        <td style=\"border: 1px solid; padding: 5px; background-color: #dcdcdc;\">\n          <b>Research; Extensive Drafting<\/b>\n        <\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">5 hours per page<\/td>\n        <td style=\"border: 1px solid; padding: 5px;\">10 hours per page<\/td>\n      <\/tr>\n    <\/tbody>\n  <\/table>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_panel": {
+      "html": "<div class=\"well\">\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"writingformat\">Format:<\/label>\n    <div>\n      <select id=\"writingformat\"><option value=\"1\" selected>Independent<\/option>\n<option value=\"2\">Scheduled<\/option><\/select>\n      <script type=\"application/json\" data-for=\"writingformat\" data-nonempty=\"\">{}<\/script>\n    <\/div>\n  <\/div>\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"writingName\">Assignment Name (optional):<\/label>\n    <input id=\"writingName\" type=\"text\" class=\"form-control\" value=\"\"/>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"numassign\">Number of Assignments:<\/label>\n    <input id=\"numassign\" type=\"number\" class=\"form-control\" value=\"0\" min=\"0\"/>\n  <\/div>\n  <hr/>\n  <div data-display-if=\"input.writingformat == 1\" data-ns-prefix=\"\">\n    <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n      <label class=\"control-label\" for=\"assignmentpages\">Pages per Assignment:<\/label>\n      <input id=\"assignmentpages\" type=\"number\" class=\"form-control\" value=\"0\" min=\"0\"/>\n    <\/div>\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"writtendensity\">Page Density:<\/label>\n      <div>\n        <select id=\"writtendensity\"><option value=\"1\" selected>250 Words<\/option>\n<option value=\"2\">500 Words<\/option><\/select>\n        <script type=\"application/json\" data-for=\"writtendensity\" data-nonempty=\"\">{}<\/script>\n      <\/div>\n    <\/div>\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"writingpurpose\">Genre:<\/label>\n      <div>\n        <select id=\"writingpurpose\"><option value=\"1\" selected>Reflection/Narrative<\/option>\n<option value=\"2\">Argument<\/option>\n<option value=\"3\">Research<\/option><\/select>\n        <script type=\"application/json\" data-for=\"writingpurpose\" data-nonempty=\"\">{}<\/script>\n      <\/div>\n    <\/div>\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"draftrevise\">Drafting:<\/label>\n      <div>\n        <select id=\"draftrevise\"><option value=\"1\" selected>No Drafting<\/option>\n<option value=\"2\">Minimal Drafting<\/option>\n<option value=\"3\">Extensive Drafting<\/option><\/select>\n        <script type=\"application/json\" data-for=\"draftrevise\" data-nonempty=\"\">{}<\/script>\n      <\/div>\n    <\/div>\n    <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n      <div class=\"checkbox\">\n        <label>\n          <input id=\"setwritingrate\" type=\"checkbox\"/>\n          <span>manually adjust<\/span>\n        <\/label>\n      <\/div>\n    <\/div>\n    <div data-display-if=\"input.setwritingrate == true\" data-ns-prefix=\"\">\n      <div class=\"form-group shiny-input-container\">\n        <label class=\"control-label\" for=\"overridehoursperwriting\">Hours per Written Page:<\/label>\n        <input id=\"overridehoursperwriting\" type=\"number\" class=\"form-control\" value=\"0.5\" min=\"0.1\"/>\n      <\/div>\n    <\/div>\n  <\/div>\n  <div data-display-if=\"input.writingformat == 2\" data-ns-prefix=\"\">\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"preptime\">Preparation Time (Minutes):<\/label>\n      <input id=\"preptime\" type=\"number\" class=\"form-control\" value=\"30\" min=\"0\"/>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "selected_radio": "Add a Writing Assignment",
+    "totalcoursehours": "Total: 0 hrs/term",
+    "workload": {
+      "html": "<div class=\"well\">\n  <table>\n    <tr style=\" background-color: #267bb6; color: white;\">\n      <th style=\"padding: 5px; border: 1px solid black;\">Component<\/th>\n      <th style=\"padding: 5px; border: 1px solid black; \">Name<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/term (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black\">hrs/term (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">Delete?<\/th>\n    <\/tr>\n  <\/table>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
