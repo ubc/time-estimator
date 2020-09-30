@@ -1,0 +1,69 @@
+{
+  "input": {
+    "add": 0,
+    "classweeks": 14,
+    "collapse1": "About this tool (click to view/hide)",
+    "collapse2": "Instructions (click to view/hide)",
+    "collapse3": null,
+    "discName": "",
+    "overridediscussion": 1,
+    "postformat": "1",
+    "postlength": 250,
+    "posts": 1,
+    "postspersem": 0,
+    "preptime": 30,
+    "radio": "discussion",
+    "resplength": 125,
+    "responses": 2,
+    "setdiscussion": false,
+    "synclength": 0,
+    "syncsessions": 0
+  },
+  "output": {
+    "estimatedAsynch": "Independent (I): 0 hrs/week",
+    "estimatedSynch": "Scheduled (S): 0 hrs/week",
+    "estimatedworkload": "Total: 0 hrs/week",
+    "numWeeks": {
+      "html": "<div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n  <label class=\"control-label\" for=\"classweeks\">Course Duration (Weeks):<\/label>\n  <input id=\"classweeks\" type=\"number\" class=\"form-control\" value=\"14\" min=\"0\"/>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_bkgd": {
+      "html": "<div>\n  <p>This component is focused on discussions, which can be either be held in an asynchronous (typically online) or synchronous (within a live session) manner. Note that there is a pull down that allows you to select the format, and the options will change accordingly. If both a relevant, you can add this component more than once.<\/p>\n  <b>Asynchronous (I)<\/b>\n  <p>Asynchronous discussions are designed to allow you to set the number of original posts (something a student has to research and post on their own) and the minimum number of replies to other posts. This parameter is challenging to quantify, as typically you expect that students will have to respond to responses on their own post, so you may want to build that into the expectation of numbers. Note that you can set the length parameter for both of these.<\/p>\n  <ul>\n    <li>By default, the average (Avg.) post length is based on the Reflection/Narrative, Minimal Drafting writing assignment estimate of 250 words per hour.<\/li>\n    <li>By default, the average (Avg.) response length is based on half of a Reflection/Narrative, Minimal Drafting writing assignment estimate of 125 words per half an hour.<\/li>\n    <li>You are able to change these averages using the Avg post length and Avg response length numeric fields.<\/li>\n  <\/ul>\n  <p>The number of hours will be assigned to the independent category and reflected in workload summary accordingly.<\/p>\n  <b>Synchronous (S)<\/b>\n  <ul>\n    <li>The Synchronous Discussion is associated with the Primary Class Meeting component and is designed to allow an instructor to take into account the preparation time required of an in class discussion. <\/li>\n    <li>The only time that will be added to the total will be a preparation time, classified as independent.<\/li>\n  <\/ul>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_panel": {
+      "html": "<div class=\"well\">\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"postformat\">Format:<\/label>\n    <div>\n      <select id=\"postformat\"><option value=\"1\" selected>Asynchronous (I)<\/option>\n<option value=\"2\">Synchronous (S)<\/option><\/select>\n      <script type=\"application/json\" data-for=\"postformat\" data-nonempty=\"\">{}<\/script>\n    <\/div>\n  <\/div>\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"discName\">Discussion Name (optional):<\/label>\n    <input id=\"discName\" type=\"text\" class=\"form-control\" value=\"\"/>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"postspersem\">Number of Discussions per Term<\/label>\n    <input id=\"postspersem\" type=\"number\" class=\"form-control\" value=\"0\" min=\"0\"/>\n  <\/div>\n  <hr/>\n  <div data-display-if=\"input.postformat == 1\" data-ns-prefix=\"\">\n    <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n      <label class=\"control-label\" for=\"posts\">Original Posts:<\/label>\n      <input id=\"posts\" type=\"number\" class=\"form-control\" value=\"1\" min=\"0\"/>\n    <\/div>\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"postlength\">Avg. Post Length (Words):<\/label>\n      <input id=\"postlength\" type=\"number\" class=\"form-control\" value=\"250\" min=\"0\"/>\n    <\/div>\n    <hr/>\n    <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n      <label class=\"control-label\" for=\"responses\">Responses:<\/label>\n      <input id=\"responses\" type=\"number\" class=\"form-control\" value=\"2\" min=\"0\"/>\n    <\/div>\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"resplength\">Avg. Response Length (Words):<\/label>\n      <input id=\"resplength\" type=\"number\" class=\"form-control\" value=\"125\" min=\"0\"/>\n    <\/div>\n  <\/div>\n  <div data-display-if=\"input.postformat == 2\" data-ns-prefix=\"\">\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"preptime\">Preparation Time (Minutes):<\/label>\n      <input id=\"preptime\" type=\"number\" class=\"form-control\" value=\"30\" min=\"0\"/>\n    <\/div>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <div class=\"checkbox\">\n      <label>\n        <input id=\"setdiscussion\" type=\"checkbox\"/>\n        <span>Manually Adjust<\/span>\n      <\/label>\n    <\/div>\n  <\/div>\n  <div data-display-if=\"input.setdiscussion == true\" data-ns-prefix=\"\">\n    <div class=\"form-group shiny-input-container\">\n      <label class=\"control-label\" for=\"overridediscussion\">Hours per Discussion:<\/label>\n      <input id=\"overridediscussion\" type=\"number\" class=\"form-control\" value=\"1\" min=\"0\"/>\n    <\/div>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "selectize",
+          "version": "0.11.2",
+          "src": {
+            "href": "shared/selectize"
+          },
+          "meta": null,
+          "script": null,
+          "stylesheet": "css/selectize.bootstrap3.css",
+          "head": "<!--[if lt IE 9]>\n<script src=\"shared/selectize/js/es5-shim.min.js\"><\/script>\n<![endif]-->\n<script src=\"shared/selectize/js/selectize.min.js\"><\/script>",
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "selected_radio": "Add a Discussion",
+    "totalcoursehours": "Total: 0 hrs/term",
+    "workload": {
+      "html": "<div class=\"well\">\n  <table>\n    <tr style=\" background-color: #267bb6; color: white;\">\n      <th style=\"padding: 5px; border: 1px solid black;\">Component<\/th>\n      <th style=\"padding: 5px; border: 1px solid black; \">Name<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/term (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black\">hrs/term (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">Delete?<\/th>\n    <\/tr>\n  <\/table>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
