@@ -1,0 +1,46 @@
+{
+  "input": {
+    "add": 0,
+    "classweeks": 14,
+    "collapse1": "About this tool (click to view/hide)",
+    "collapse2": "Instructions (click to view/hide)",
+    "collapse3": null,
+    "radio": "classmeeting",
+    "synclength": 0,
+    "syncsessions": 1
+  },
+  "output": {
+    "estimatedAsynch": "Independent (I): 0 hrs/week",
+    "estimatedSynch": "Scheduled (S): 0 hrs/week",
+    "estimatedworkload": "Total: 0 hrs/week",
+    "numWeeks": {
+      "html": "<div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n  <label class=\"control-label\" for=\"classweeks\">Course Duration (Weeks):<\/label>\n  <input id=\"classweeks\" type=\"number\" class=\"form-control\" value=\"14\" min=\"0\"/>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_bkgd": {
+      "html": "<div>\n  <p>This component tracks the number of hours students are expected to attend meetings (virtual or face-to-face) with the entire class. Typically, this type of meeting is recorded in a student information system as the “primary” meeting of a course, and instructional approaches may vary widely (e.g., lecture, seminar, active learning session of a flipped classroom delivery). The Primary Class Meeting component is synchronous and categorized as scheduled (S).<\/p>\n  <p>Note that you are able to associate some components (e.g., synchronous discussions and scheduled writing assignments, exams, and quizzes) with the Primary Class Meeting in order to add a preparation time in association with those activities.<\/p>\n  <br/>\n  <b>Calculations<\/b>\n  <ul>\n    <li>The number of hours per week is calculated by first multiplying the number of Meetings per Week by Meeting Length (Hours) and then dividing that product by the number of weeks.<\/li>\n    <li>The number of hours per term is calculated by multiplying the number of Meetings per Week by Meeting Length (Hours).<\/li>\n  <\/ul>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_panel": {
+      "html": "<div class=\"well\">\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"syncsessions\">Meetings per Week:<\/label>\n    <input id=\"syncsessions\" type=\"number\" class=\"form-control\" value=\"0\" min=\"0\"/>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"synclength\">Meeting Length (Hours):<\/label>\n    <input id=\"synclength\" type=\"number\" class=\"form-control\" value=\"0\" min=\"0\"/>\n  <\/div>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_radio": "Add the Primary Class Meeting",
+    "totalcoursehours": "Total: 0 hrs/term",
+    "workload": {
+      "html": "<div class=\"well\">\n  <table>\n    <tr style=\" background-color: #267bb6; color: white;\">\n      <th style=\"padding: 5px; border: 1px solid black;\">Component<\/th>\n      <th style=\"padding: 5px; border: 1px solid black; \">Name<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/term (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black\">hrs/term (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">Delete?<\/th>\n    <\/tr>\n  <\/table>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

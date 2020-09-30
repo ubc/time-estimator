@@ -1,0 +1,82 @@
+{
+  "input": {
+    "add": 0,
+    "classweeks": 14,
+    "collapse1": "About this tool (click to view/hide)",
+    "collapse2": "Instructions (click to view/hide)",
+    "collapse3": null,
+    "customhours": 5,
+    "customName": "custom",
+    "customnum": 14,
+    "custprep": 1,
+    "custsynch": false,
+    "postcust": 1,
+    "radio": "custom",
+    "synclength": 0,
+    "syncsessions": 0
+  },
+  "output": {
+    "estimatedAsynch": "Independent (I): 0 hrs/week",
+    "estimatedSynch": "Scheduled (S): 0 hrs/week",
+    "estimatedworkload": "Total: 0 hrs/week",
+    "numWeeks": {
+      "html": "<div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n  <label class=\"control-label\" for=\"classweeks\">Course Duration (Weeks):<\/label>\n  <input id=\"classweeks\" type=\"number\" class=\"form-control\" value=\"14\" min=\"0\"/>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_bkgd": {
+      "html": "<div>\n  <p>This component may be used for assignments that fall outside of the categories above such as group work, projects, and discipline-specific assignments. The hours in this component can be assigned to either the scheduled or independent categories based on whether the scheduled checkbox is checked. When the scheduled box is checked (the default state), the hours are assigned to the scheduled totals. If the check is removed, all hours are assigned to the independent category and reflected in workload summary accordingly. Note that you may optionally add preparation time (e.g., for group meetings) and post-assignment time (e.g., a reflection).<\/p>\n<\/div>",
+      "deps": [
+
+      ]
+    },
+    "selected_panel": {
+      "html": "<div class=\"well\">\n  <div class=\"form-group shiny-input-container\">\n    <label class=\"control-label\" for=\"customName\">Assignment Name (optional):<\/label>\n    <input id=\"customName\" type=\"text\" class=\"form-control\" value=\"\"/>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"customnum\">Custom Assignments per Term:<\/label>\n    <input id=\"customnum\" type=\"number\" class=\"form-control\" value=\"0\" min=\"0\"/>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"custprep\">Preparation per Assignment (Independent):<\/label>\n    <input class=\"js-range-slider\" id=\"custprep\" data-min=\"0\" data-max=\"10\" data-from=\"0\" data-step=\"0.25\" data-grid=\"true\" data-grid-num=\"10\" data-grid-snap=\"false\" data-prettify-separator=\",\" data-prettify-enabled=\"true\" data-keyboard=\"true\" data-data-type=\"number\"/>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"customhours\">Hours per Assignment:<\/label>\n    <input class=\"js-range-slider\" id=\"customhours\" data-min=\"0\" data-max=\"50\" data-from=\"0\" data-step=\"0.25\" data-grid=\"true\" data-grid-num=\"10\" data-grid-snap=\"false\" data-prettify-separator=\",\" data-prettify-enabled=\"true\" data-keyboard=\"true\" data-data-type=\"number\"/>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <div class=\"checkbox\">\n      <label>\n        <input id=\"custsynch\" type=\"checkbox\"/>\n        <span>Scheduled<\/span>\n      <\/label>\n    <\/div>\n  <\/div>\n  <div class=\"form-group shiny-input-container\" style=\"width: 100%;\">\n    <label class=\"control-label\" for=\"postcust\">Post-Assignment (Independent):<\/label>\n    <input class=\"js-range-slider\" id=\"postcust\" data-min=\"0\" data-max=\"10\" data-from=\"0\" data-step=\"0.25\" data-grid=\"true\" data-grid-num=\"10\" data-grid-snap=\"false\" data-prettify-separator=\",\" data-prettify-enabled=\"true\" data-keyboard=\"true\" data-data-type=\"number\"/>\n  <\/div>\n<\/div>",
+      "deps": [
+        {
+          "name": "ionrangeslider",
+          "version": "2.1.6",
+          "src": {
+            "href": "shared/ionrangeslider"
+          },
+          "meta": null,
+          "script": "js/ion.rangeSlider.min.js",
+          "stylesheet": [
+            "css/ion.rangeSlider.css",
+            "css/ion.rangeSlider.skinShiny.css"
+          ],
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        },
+        {
+          "name": "strftime",
+          "version": "0.9.2",
+          "src": {
+            "href": "shared/strftime"
+          },
+          "meta": null,
+          "script": "strftime-min.js",
+          "stylesheet": null,
+          "head": null,
+          "attachment": null,
+          "package": null,
+          "all_files": true
+        }
+      ]
+    },
+    "selected_radio": "Add a Custom Assignment",
+    "totalcoursehours": "Total: 0 hrs/term",
+    "workload": {
+      "html": "<div class=\"well\">\n  <table>\n    <tr style=\" background-color: #267bb6; color: white;\">\n      <th style=\"padding: 5px; border: 1px solid black;\">Component<\/th>\n      <th style=\"padding: 5px; border: 1px solid black; \">Name<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/wk (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">hrs/term (I)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black\">hrs/term (S)<\/th>\n      <th style=\"padding: 5px; border: 1px solid black;\">Delete?<\/th>\n    <\/tr>\n  <\/table>\n<\/div>",
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}
